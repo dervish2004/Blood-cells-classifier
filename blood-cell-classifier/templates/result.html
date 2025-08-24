@@ -1,11 +1,58 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Prediction Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+    .result-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #eee;
+      border-radius: 8px;
+    }
+    .link-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #6c757d;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    .link-button:hover {
+      background-color: #5a6268;
+    }
+  </style>
 </head>
 <body>
-  <h2>Prediction: {{ result }}</h2>
-  <img src="{{ image }}" width="300">
-  <br><a href="/">Predict another</a>
+  <div class="result-container">
+    <h2>Prediction: {{ result }}</h2>
+    <img src="{{ image }}" alt="Uploaded Image" width="300">
+    <br>
+    <a href="/" class="link-button">Predict another</a>
+  </div>
 </body>
 </html>
